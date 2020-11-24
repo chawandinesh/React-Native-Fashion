@@ -3,7 +3,6 @@ import { Text } from "react-native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { Onboarding, Welcome } from "./src/Authentication";
 import { LoadAssets } from "./src/Authentication/components";
-import { NavigationContainer } from "@react-navigation/native";
 
 const AuthenticationStack = createStackNavigator();
 

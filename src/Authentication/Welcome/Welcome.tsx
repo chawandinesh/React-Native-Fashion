@@ -8,5 +8,3 @@ export function Welcome() {
     </View>
   );
 }
-
-// export default Welcome;

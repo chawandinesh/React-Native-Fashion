@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     justifyContent: "flex-end",
   },
   picture: {
-    ...StyleSheet.absoluteFillObject,
+    // ...StyleSheet.absoluteFillObject,
     width: width,
     height: height,
     alignSelf: "center",
