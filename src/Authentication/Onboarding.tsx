@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { View, StyleSheet, Dimensions, Text } from "react-native";
+import { View, StyleSheet, Dimensions } from "react-native";
 import Animated, { divide, multiply } from "react-native-reanimated";
 import { useScrollHandler } from "react-native-redash/src/v1/Hooks";
 import { interpolateColor } from "react-native-redash/src/v1/Colors";

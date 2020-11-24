@@ -1,8 +1,8 @@
 import * as React from "react";
-import { Text } from "react-native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { Onboarding, Welcome } from "./src/Authentication";
-import { LoadAssets } from "./src/Authentication/components";
+import { LoadAssets, theme } from "./src/Authentication/components";
+import { ThemeProvider } from "@shopify/restyle";
 
 const AuthenticationStack = createStackNavigator();
 
@@ -31,8 +31,10 @@ const AuthenticationNavigator = () => {
 };
 export default function App() {
   return (
-    <LoadAssets {...{ fonts }}>
-      <AuthenticationNavigator />
-    </LoadAssets>
+    <ThemeProvider {...{ theme }}>
+      <LoadAssets {...{ fonts }}>
+        <AuthenticationNavigator />
+      </LoadAssets>
+    </ThemeProvider>
   );
 }

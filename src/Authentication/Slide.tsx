@@ -1,5 +1,6 @@
 import React from "react";
-import { View, Text, StyleSheet, Dimensions, Image } from "react-native";
+import { View, StyleSheet, Dimensions, Image } from "react-native";
+import { Text } from "./components/Theme";
 
 const { width, height } = Dimensions.get("window");
 export const SLIDE_HEIGHT = 0.61 * height;
@@ -23,7 +24,7 @@ function Slide({ title, right, picture }: SlideProps) {
         <Image source={picture} style={styles.picture} />
       </View>
       <View style={[styles.titleContainer, { transform }]}>
-        <Text style={styles.title}>{title}</Text>
+        <Text variant="hero">{title}</Text>
       </View>
     </View>
   );
@@ -32,13 +33,6 @@ function Slide({ title, right, picture }: SlideProps) {
 const styles = StyleSheet.create({
   container: {
     width: width,
-  },
-  title: {
-    fontSize: 80,
-    lineHeight: 80,
-    fontFamily: "SFProText-Bold",
-    color: "#fff",
-    textAlign: "center",
   },
   titleContainer: {
     height: 100,
@@ -49,9 +43,8 @@ const styles = StyleSheet.create({
     justifyContent: "flex-end",
   },
   picture: {
-    // ...StyleSheet.absoluteFillObject,
     width: width,
-    height: height,
+    height: SLIDE_HEIGHT,
     alignSelf: "center",
     borderBottomRightRadius: BORDER_RADIUS,
   },
